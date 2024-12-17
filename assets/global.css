@@ -1,0 +1,162 @@
+@font-face {
+  font-family: Inspire;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire/Inspire-Bold.4ff15ddc93445342649194969715b0b5.woff2);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inspire;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire/Inspire-Regular.f2199f841165c4ddbafcf177da3ef974.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: Inspire-KO;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire-kr/InspireKR-Bold.6a7047549e067f2b357876a5010d9b89.woff2);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inspire-KO;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire-kr/InspireKR-Regular.dd56826529a5cf37cf650680f7b063b0.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: Inspire-JP;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire-jp/InspireJP-Bold.69e39ed68847d8efc12e88b589f93407.woff2);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inspire-JP;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire-jp/InspireJP-Regular.c92c9b86823358408a1227800f100720.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: Inspire-SC;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire-sc/InspireSC-Bold.b367bf153b5918acc21d0da0e31857e3.woff2);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inspire-SC;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire-sc/InspireSC-Regular.38b74be328515fd1914cc850be5f9589.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: Inspire-TC;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire-tc/InspireTC-Bold.adfe6628042563b84734415ea972161a.woff2);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inspire-TC;
+  src: url(https://static-assets.bamgrid.com/fonts/inspire-tc/InspireTC-Regular.e43d66bdeb53956bcbe1af4d3aae8140.woff2);
+  font-weight: 400;
+  font-style: normal;
+  font-display: optional;
+}
+
+body {
+  font-family: Inspire, sans-serif;
+  color: silver;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+}
+h5,
+h6 {
+  color: white;
+}
+.grid-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-left: 0;
+}
+.grid-list.two-columns > li {
+  flex: 0 0 calc(50% - 12px);
+  width: calc(50% - 12px);
+}
+.grid-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: relative;
+}
+.grid-item:first-child {
+  margin-top: 0;
+}
+.grid-item div > :last-child {
+  margin-bottom: 0;
+}
+picture.lg-200 {
+  max-width: 200px;
+  width: 100%;
+}
+picture {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.primary-blue {
+  display: block;
+  color: #040714;
+  height: 60px;
+  margin-top: 20px;
+  max-width: 360px;
+  padding: 16.5px 24px;
+  background: #02d6e8;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 360px;
+  width: 100%;
+}
+.spacer {
+  margin-top: 4px;
+}
+.background-image {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  .bg-image-container {
+    height: 100%;
+    list-style: none;
+    margin-top: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    display: block;
+    opacity: 1;
+    transition: opacity 2s;
+    z-index: 0;
+  }
+}
+.hero-container {
+  position: relative;
+  z-index: 1;
+}
