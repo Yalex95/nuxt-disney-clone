@@ -68,6 +68,9 @@
   font-style: normal;
   font-display: optional;
 }
+:root{
+  background-color: #040714;
+}
 
 body {
   font-family: Inspire, sans-serif;
@@ -142,6 +145,7 @@ picture {
   right: 0;
   top: 0;
   width: 100%;
+
   .bg-image-container {
     height: 100%;
     list-style: none;
@@ -154,6 +158,11 @@ picture {
     opacity: 1;
     transition: opacity 2s;
     z-index: 0;
+
+    /* img{
+      transition: all 0.3s ease-in-out;
+      transform: scalex(1) translateZ(0);
+    } */
   }
 }
 .hero-container {
