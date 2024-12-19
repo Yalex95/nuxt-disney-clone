@@ -1,27 +1,66 @@
 <template>
-  <section class="slider-container">
-    
+  <div class="slider-container py-[10px]">
     <div id="slider" class="slider">
-        <div v-for="slider in sliders" class="slider-item">
-          <img :src="slider.image" alt="" />
-        </div>
+      <div v-for="slider in sliders" class="slider-item ">
+        <img :src="slider.image" :alt="slider.alt" />
       </div>
+    </div>
 
-    <button
-      id="prevBtn"
-      @click="prevSlide"
-      class="round bg-[#e5e5e5] px-3 py-2 rounded text-black mr-3"
-    >
-      Previous
-    </button>
-    <button
-      id="nextBtn"
-      @click="nextSlide"
-      class="round bg-[#e5e5e5] px-3 py-2 rounded text-black"
-    >
-      Next
-    </button>
-  </section>
+    <div class="controls">
+      <button
+        id="prevBtn"
+        @click="prevSlide"
+        :class="[
+          showPrevArrow ? 'active' : '',
+          'round  px-3 py-2 rounded text-black mr-3',
+        ]"
+      >
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="button-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-label="previous button"
+            role="img"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 19l-7-7 7-7"
+            ></path></svg
+        ></span>
+      </button>
+      <button
+        id="nextBtn"
+        @click="nextSlide"
+        :class="[
+          showNextArrow ? 'active' : '',
+          'round  px-3 py-2 rounded text-black',
+        ]"
+      >
+        <span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="button-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-label="next button"
+            role="img"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 5l7 7-7 7"
+            ></path></svg
+        ></span>
+      </button>
+    </div>
+  </div>
 </template>
 <script setup>
 const props = defineProps({
@@ -34,23 +73,28 @@ const props = defineProps({
     default: 3,
   },
 });
-onMounted(() => {});
+const showNextArrow = ref(true);
+const showPrevArrow = ref(false);
 
 const nextSlide = () => {
   let slider = document.getElementById("slider");
   let itemWidth = slider.querySelector(".slider-item").offsetWidth + 10;
   slider.scrollBy({
-    left: itemWidth*props.itemsPerSlide,
+    left: itemWidth * props.itemsPerSlide,
     behavior: "smooth",
   });
+  showNextArrow.value = false;
+  showPrevArrow.value = true;
 };
 const prevSlide = () => {
   let slider = document.getElementById("slider");
   let itemWidth = slider.querySelector(".slider-item").offsetWidth + 10;
   slider.scrollBy({
-    left: -itemWidth*props.itemsPerSlide,
+    left: -itemWidth * props.itemsPerSlide,
     behavior: "smooth",
   });
+  showPrevArrow.value = false;
+  showNextArrow.value = true;
 };
 </script>
 <style scoped>
@@ -71,6 +115,9 @@ const prevSlide = () => {
   flex: 0 0 18.25%;
   box-sizing: border-box;
   padding: 10px;
+  img{
+    border-radius: 4px;
+  }
 }
 .slider-item:first-child,
 .slider-item:last-child {
@@ -88,5 +135,42 @@ const prevSlide = () => {
   scroll-behavior: smooth;
   scrollbar-width: none;
   touch-action: pan-x;
+}
+.controls {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+/*
+.prevBtn {
+  left: 0;
+}
+.nextBtn {
+  right: 0;
+}*/
+#prevBtn,
+#nextBtn {
+  color: #fff;
+  cursor: pointer;
+  height: 100%;
+  background: transparent;
+  opacity: 0;
+}
+#nextBtn.active,#prevBtn.active {
+  opacity: 1;
+}
+#nextBtn:hover.active .button-icon,#prevBtn:hover.active .button-icon {
+  opacity: 1;
+}
+.button-icon {
+  display: block;
+  height: 45px;
+  width: 45px;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 </style>
