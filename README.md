@@ -14,12 +14,11 @@ A fully responsive Disney+ clone built using modern web development technologies
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) and custom CSS.
 - **Markup & Scripting**: HTML and JavaScript.
 - **Components Library**: [Nuxt UI](https://nuxt.com/docs/getting-started/ui-components).
-- **API Integration**: [TMDB API](https://www.themoviedb.org/) for media content.
 
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/disney-clone.git
+   git clone 
    cd disney-clone
 2. Install dependencies
    ```bash
