@@ -1,17 +1,17 @@
 <template>
   <!-- hero -->
-  <section
-    class="items-center flex box-border md:px-[5.6rem] md:pt-[10vw]  md:pb-[100px] relative min-h-[100vh] justify-start inspire"
+  <section id="hero"
+    class="items-center flex box-border pt-[50vw] md:px-[5.6rem] md:pt-[10vw]  md:pb-[100px] relative min-h-[75vh] md:min-h-[100vh] justify-start inspire"
   >
     <div class="max-w-full w-full md:max-w-[50%] md:w-[640px] text-left hero-container">
-      <h1>
+      <h1 class="text-center md:text-left ">
         <span
-          class="text-[44px] mt-[24px] mb-0 letter-spacing-[-.16px] text-white font-bold"
+          class=" text-[32px] md:text-[44px] mt-[24px] mb-0 letter-spacing-[-.16px] text-white font-bold leading-tight"
         >
           Endless entertainment for all
         </span>
         <br />
-        <span class="text-[20px] mt-[24px] text-white">
+        <span class="text-[16px] mt-[16px] md:text-[20px] mt-[24px] text-white leading-tight">
           <b>Bundle plans starting at $10.99/month</b>
         </span>
       </h1>

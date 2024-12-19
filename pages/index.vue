@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <main>
     <Home />
     <section class="py-[2.3vw] text-center text-white">
       <p class="text-[40px] font-bold">Disney+ is Your Streaming Home for the Holidays</p>
@@ -16,7 +16,7 @@
       :items-per-slide="5.5"
     />
     </section>
-  </div>
+  </main>
 </template>
 <script setup>
 const holidaysStreaming = [
