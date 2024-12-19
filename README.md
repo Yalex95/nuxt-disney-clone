@@ -6,7 +6,6 @@ A fully responsive Disney+ clone built using modern web development technologies
 
 ## Key Features
 - **Home Page**: A responsive and visually appealing design inspired by Disney+'s interface.
-- **Dynamic Content**: Displays movies, shows, and categories using external APIs (e.g., TMDB).
 - **Responsive Design**: Built to adapt seamlessly to mobile, tablet, and desktop devices.
 - **Reusable Components**: Utilizes Nuxt UI and Tailwind CSS for modular and maintainable code.
 
